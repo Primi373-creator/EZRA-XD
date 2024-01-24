@@ -1,7 +1,7 @@
 {
   "name": "EZRA-XD",
   "description": "Ezra Multi Device whatsappbot",
-  "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+  "logo": "https://i.imgur.com/o4bQB14.jpeg",
   "keywords": ["whatsapp"],
   "repository": "https://github.com/Louis-X0/EZRA-XD",
   "website": "https://github.com/Louis-X0/EZRA-XD",
@@ -71,7 +71,7 @@
     "BOT_INFO": {
       "description": "bot info",
       "required": "true",
-      "value": "𝐄𝐳𝐫𝐚-𝐗𝐃;𝐋𝐨𝐮𝐢𝐬-𝐗𝟎;photourl"
+      "value": "𝐄𝐳𝐫𝐚-𝐗𝐃;𝐋𝐨𝐮𝐢𝐬-𝐗𝟎;https://i.imgur.com/o4bQB14.jpeg"
     }
   }
 }
