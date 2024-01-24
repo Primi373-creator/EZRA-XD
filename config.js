@@ -21,10 +21,7 @@ module.exports = {
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   SESSION_ID:process.env.SESSION_ID || "ZUJBSGh_XASENA_kNGI=",
   LANG: process.env.LANG || "EN",
-  HANDLERS:
-    process.env.HANDLER === "false" || process.env.PREFIX === "null"
-      ? "^"
-      : "^[.]",
+  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "master",
   PACKNAME: process.env.PACKNAME || "AMRU-MD",
