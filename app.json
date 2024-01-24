@@ -1,11 +1,11 @@
 {
-  "name": "AMRU-MD",
-  "description": "Amru Multi Device whatsappbot",
+  "name": "EZRA-XD",
+  "description": "Ezra Multi Device whatsappbot",
   "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
   "keywords": ["whatsapp"],
-  "repository": "https://github.com/AMRUSIR/AMRU_SER_MD",
-  "website": "https://github.com/AMRUSIR/AMRU_SER_MD",
-  "success_url": "https://github.com/AMRUSIR/AMRU_SER_MD",
+  "repository": "https://github.com/Louis-X0/EZRA-XD",
+  "website": "https://github.com/Louis-X0/EZRA-XD",
+  "success_url": "https://github.com/Louis-X0/EZRA-XD",
   "stack": "container",
   "env": {
     "ANTI_LINK": {
@@ -13,7 +13,7 @@
       "required": false
     },
     "ANTILINK_ACTION": {
-      "description": "kick",
+      "description": "kick/warn",
       "required": false
     },
     "RMBG_KEY": {
@@ -21,7 +21,7 @@
       "required": false
     },
     "SESSION_ID": {
-      "description": "Your Session ID",
+      "description": "Ezra-Xd Session ID",
       "required": true
     },
     "HANDLERS": {
@@ -36,6 +36,7 @@
     "PACKNAME": {
       "description": "Sticker Packname",
       "required": false
+      "value": "𝐄𝐳𝐫𝐚-𝐗𝐃"
     },
 
     "GOODBYE_MSG": {
@@ -45,10 +46,14 @@
     "AUTHOR": {
       "description": "Sticker Pack AUTHOR",
       "required": false
+      "value": "©𝐋𝐨𝐮𝐢𝐬-𝐗𝟎"
+      
     },
     "SUDO": {
       "description": "sudo numbers with country code seperate with , for multiple numbers",
-      "required": false
+      "required": true
+       "value": "48888887897"
+      
     },
     "WORK_TYPE": {
       "description": "work type",
@@ -62,6 +67,11 @@
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
       "required": true
+     },
+    "BOT_INFO": {
+      "description": "bot info",
+      "required": "true",
+      "value": "𝐄𝐳𝐫𝐚-𝐗𝐃;𝐋𝐨𝐮𝐢𝐬-𝐗𝟎;photourl"
     }
   }
 }
