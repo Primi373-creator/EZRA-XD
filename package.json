@@ -1,7 +1,7 @@
 {
-  "name": "X-AsenaDuplicated",
-  "version": "3.0.0",
-  "description": "X-Asena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+  "name": "Ezra-md",
+  "version": "2.0.1",
+  "description": "Ezra-md simple multi device WhatsApp Bot.",
   "main": "./index.js",
   "type": "commonjs",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AMRUSIR/AMRU_SER_MD.git"
+    "url": "git+https://github.com/Louis-X0/EZRA-XD.git"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "ai",
-    "X-Asena",
-    "X-Electra",
+    "Ezra",
+    "Louis",
     "api",
     "unlimited",
     "asenadev",
@@ -26,13 +26,13 @@
     "whatsapp api",
     "WhatsAsena"
   ],
-  "author": "X-Electra",
-  "developer": "X-Electra / V1P3R-X",
+  "author": "Louis",
+  "developer": "Louis / Zeta",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/AMRUSIR/AMRU_SER_MD/issues"
+    "url": "https://github.com/Louis-X0/EZRA-XD/issues"
   },
-  "homepage": "https://github.com/AMRUSIR/AMRU_SER_MD#readme",
+  "homepage": "https://github.com/Louis-XD/EZRA-XD#readme",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.6.0",
     "@adiwajshing/keyed-db": "^0.2.4",
