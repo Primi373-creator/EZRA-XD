@@ -75,7 +75,7 @@ async function Abhiy() {
 
     if (connection === "open") {
     
-      console.log("✅ Login Successful!!");
+      console.log("🩵WhatsApp Conncetd!!");
       console.log("Installing External Plugins...");
 
       let plugins = await PluginDB.findAll();
@@ -99,8 +99,8 @@ async function Abhiy() {
           require("./plugins/" + plugin);
         }
       });
-      console.log(" Plugin Installed..!!✅");
-      let str = `EZRA MD STARTED \nVERSION   : ${require("./package.json").version } \nPLUGINS   : ${events.commands.length}`;
+      console.log(" Ezra-XD Conncted🎈");
+      let str = `\n\n\n⛦ 𝐄𝐙𝐑𝐀 𝐗𝐃 𝐈𝐒 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ⛦ \n⋆ᴠᴇʀsɪᴏɴ  : ${require("./package.json").version } \n⋆ᴘʟᴜɢɪɴs  : ${events.commands.length}`;
       conn.sendMessage(conn.user.id, { text: str });
      try {
         conn.ev.on("creds.update", saveCreds);
