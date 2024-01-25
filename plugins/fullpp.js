@@ -1,4 +1,4 @@
->const { command } = require("../lib/");
+const { command } = require("../lib/");
 const Jimp = require("jimp");
 
 command(
