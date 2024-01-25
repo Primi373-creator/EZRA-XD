@@ -136,89 +136,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
-  {
-    pattern: "song",
-    fromMe: isPrivate,
-    desc: "Downloads Song",
-    type: "downloader",
-  },
-  async (message, match) => {
-    if (!(match || message.reply_message.text))
-      return await message.reply("_Enter Song Name_");
-    match = match || message.reply_message.text;
-    if (ytIdRegex.test(match)) {
-      yta(match.trim()).then(async ({ dl_link, title, thumb }) => {
-        message.reply("1 " + dl_link)
-      let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-        });
-        message.sendMessage(
-          buff,
-          { mimetype: "audio/mpeg", quoted: message.data },
-          "audio"
-        );
-      });
-    }
-    search(match + "song").then(async ({ videos }) => {
-      await message.reply(`_Downloading ${videos[0].title}_`);
-      let a = videos[0].url
-    //  let b = a.url
-      await message.reply(`${a}`)
-      yta(videos[0].url).then(async ({ dl_link, title, thumb }) => {
-   //     message.reply()
-        let buff = await AddMp3Meta(dl_link, thumb, {
-          title,
-          artist: [videos[0].author],
-        });
-        message.sendMessage(
-          buff,
-          { mimetype: "audio/mpeg", quoted: message.data },
-          "audio"
-        );
-      });
-    });
-  }
-);
 
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
-
-command(
-  {
-    pattern: "video ?(.*)",
-    fromMe: isPrivate,
-    desc: "Downloads video",
-    type: "downloader",
-  },
-  async (message, match) => {
-  //  if (!match || !message.reply_message.text)
-   //   return await message.reply("_Enter Video Name_");
-    match = match || message.reply_message.text;
-    if (ytIdRegex.test(match)) {
-      ytv(match.trim()).then(({ dl_link, title }) => {
-        message.sendFromUrl(dl_link, { filename: title });
-      });
-    }
-    search(match).then(async ({ videos }) => {
-      await message.reply(`_Downloading ${videos[0].title}_`);
-      ytv(videos[0].url).then(({ dl_link, title }) => {
-        message.sendFromUrl(dl_link, { filename: title, quoted: message });
-      });
-    });
-  }
-);
-
-
-
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
 
 command(
   {
@@ -240,40 +158,6 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
-  {
-    pattern: "fetch",
-    fromMe: isPrivate,
-    desc: "Downloads from a direct link",
-    type: "downloader",
-  },
-  async (message, match) => {
-    match = match || message.reply_message.text;
-    if (!match)
-      return message.reply(
-        "_Send a direct media link_\n_*link;caption(optional)*_"
-      );
-    try {
-      let url = match.split(";")[0];
-      let options = {};
-      options.caption = match.split(";")[1];
-
-      if (isUrl(url)) {
-        message.sendFromUrl(url, options);
-      } else {
-        message.reply("_Not a URL_");
-      }
-    } catch (e) {
-      console.log(e);
-      message.reply("_No content found_");
-    }
-  }
-);
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-M
-*/
 
 
 command(
