@@ -318,40 +318,8 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
-  {
-    pattern: "update now",
-    fromMe: true,
-    type: "heroku",
-    desc: "Updates the Bot",
-  },
-  async (message) => {}
-);
 
-//Credits Mask-ser
-//created by mask ser for HERMIT_MD
-const { SUDO } = require("../config");
-const { Function } = require("../lib/");
-Function(
-  { pattern: "setsudo ?(.*)", fromMe: true, desc: "set sudo", type: "user" },
-  async (m, mm) => {
-    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
-      "@"
-    )[0];
-    if (!newSudo)
-      return await m.sendMessage("*reply to a number*", { quoted: m });
-    var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
-    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
-    await m.sendMessage("```new sudo numbers are: ```" + setSudo, {
-      quoted: m,
-    });
-    await m.sendMessage("_It takes 30 seconds to make effect_", { quoted: m });
-    await heroku
-      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
-      .then(async (app) => {});
-  }
-);
-Function(
+command(
   {
     pattern: "delsudo ?(.*)",
     fromMe: true,
@@ -374,7 +342,7 @@ Function(
       .then(async (app) => {});
   }
 );
-Function(
+command(
   { pattern: "getsudo ?(.*)", fromMe: true, desc: "shows sudo", type: "user" },
   async (m) => {
     const vars = await heroku
