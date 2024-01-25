@@ -133,31 +133,7 @@ command(
 /* Copyright (C) 2022 X-Electra.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
-
-
-
-command(
-  {
-    pattern: "mp3",
-    fromMe: isPrivate,
-    desc: "converts video/voice to mp3",
-    type: "downloader",
-  },
-  async (message, match, m) => {
-    //if(message.reply_message.text) return await message.reply('_Enter Video Name_')
-    let buff = await m.quoted.download();
-    buff = await toAudio(buff, "mp3");
-    return await message.sendMessage(buff, { mimetype: "audio/mpeg" }, "audio");
-  }
-);
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
-
+X-Asena */
 
 
 command(
