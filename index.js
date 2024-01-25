@@ -60,7 +60,7 @@ async function Abhiy() {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
       console.log("Ezra");
-      console.log("Connecting to WhatsApp...!! Please Wait.");
+      console.log("Connecting to Ezra-XD...!! Please Wait...");
     }
 
     if (
@@ -75,8 +75,8 @@ async function Abhiy() {
 
     if (connection === "open") {
     
-      console.log("✅ Login Successful!!");
-      console.log("Installing External Plugins...");
+      console.log("Plugins Installed...");
+      console.log("Ezra-XD Is Started🩵...");
 
       let plugins = await PluginDB.findAll();
       plugins.map(async (plugin) => {
@@ -100,7 +100,7 @@ async function Abhiy() {
         }
       });
       console.log(" Plugin Installed..!!✅");
-      let str = `EZRA MD STARTED \nVERSION   : ${require("./package.json").version } \nPLUGINS   : ${events.commands.length}`;
+      let str = `\n\n\n\n〄 𝑬𝒁𝑹𝑨 𝑿𝑫 𝑰𝑺 𝑺𝑻𝑨𝑹𝑻𝑬𝑫 〄 \n\n\n✰ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡    : ${require("./package.json").version } \n✰ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦   : ${events.commands.length}`;
       conn.sendMessage(conn.user.id, { text: str });
      try {
         conn.ev.on("creds.update", saveCreds);
