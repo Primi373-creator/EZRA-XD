@@ -100,7 +100,7 @@ async function Abhiy() {
         }
       });
       console.log(" Ezra-XD Conncted🎈");
-      let str = `\n\n\n⛦ 𝐄𝐙𝐑𝐀 𝐗𝐃 𝐈𝐒 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ⛦ \n⋆ᴠᴇʀsɪᴏɴ  : ${require("./package.json").version } \n⋆ᴘʟᴜɢɪɴs  : ${events.commands.length}`;
+      let str = `\n\n\n⛦ 𝐄𝐙𝐑𝐀 𝐗𝐃 𝐈𝐒 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ⛦ \n\n\n\n⋆ᴠᴇʀsɪᴏɴ  : ${require("./package.json").version } \n⋆ᴘʟᴜɢɪɴs  : ${events.commands.length}`;
       conn.sendMessage(conn.user.id, { text: str });
      try {
         conn.ev.on("creds.update", saveCreds);
