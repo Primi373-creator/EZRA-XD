@@ -246,37 +246,68 @@ X-Asena - X-Electra
 */
 
 
+const { SUDO } = require("../config");
+const { command, isPrivate } = require("../lib");
+const Config = require("../config");
+const Heroku = require("heroku-client");
+const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
+const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 command(
-  {
-    pattern: "delsudo ?(.*)",
-    fromMe: true,
-    desc: "delete sudo sudo",
-    type: "user",
-  },
-  async (m, mm) => {
-    var newSudo = (m.reply_message ? m.reply_message.jid : "" || mm).split(
+  { pattern: "setsudo ?(.*)", fromMe: isPrivate, desc: "set new sudo", type: "heroku" },
+  async (message, mm) => {
+    var newSudo = (message.reply_message ? message.reply_message.jid : "" || mm).split(
       "@"
     )[0];
-    if (!newSudo) return await m.sendMessage("*Need reply/mention/number*");
-    var setSudo = SUDO.replace(newSudo, "").replace(/,,/g, ",");
+    if (!newSudo)
+      return await message.sendMessage("*Need reply/mention/number*", { quoted: message });
+    var setSudo = (SUDO + "," + newSudo).replace(/,,/g, ",");
     setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
-    await m.sendMessage("```NEW SUDO NUMBERS ARE: ```" + setSudo, {
-      quoted: m,
+    await message.sendMessage("```new sudo numbers are: ```" + setSudo, {
+      quoted: message,
     });
-    await m.sendMessage("_IT TAKES 30 SECONDS TO MAKE EFFECT_", { quoted: m });
+    await message.sendMessage("*It takes 30 seconds to make effect*", { quoted: message });
     await heroku
       .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
       .then(async (app) => {});
   }
 );
+
 command(
-  { pattern: "getsudo ?(.*)", fromMe: true, desc: "shows sudo", type: "user" },
-  async (m) => {
+  {
+    pattern: "delsudo ?(.*)",
+    fromMe: isPrivate,
+    desc: "delete sudo number",
+    type: "heroku",
+  },
+  async (message, mm) => {
+    var newSudo = (message.reply_message ? message.reply_message.jid : "" || mm).split(
+      "@"
+    )[0];
+    if (!newSudo) return await message.sendMessage("*Need reply/mention/number*");
+    var setSudo = SUDO.replace(newSudo, "").replace(/,,/g, ",");
+    setSudo = setSudo.startsWith(",") ? setSudo.replace(",", "") : setSudo;
+    await message.sendMessage("```new sudo numbers are: ```" + setSudo, {
+      quoted: message,
+    });
+    await message.sendMessage("*It takes 30 seconds to make effect*", { quoted: message });
+    await heroku
+      .patch(baseURI + "/config-vars", { body: { SUDO: setSudo } })
+      .then(async (app) => {});
+  }
+);
+
+command(
+  { pattern: "getsudo ?(.*)", 
+    fromMe: isPrivate, 
+    desc: "shows sudo numbers", 
+    type: "heroku" 
+  },
+  async (message, match) => {
     const vars = await heroku
       .get(baseURI + "/config-vars")
       .catch(async (error) => {
-        return await m.send("HEROKU : " + error.body.message);
+        return await message.send("HEROKU : " + error.body.message);
       });
-    await m.send("```" + `SUDO Numbers are : ${vars.SUDO}` + "```");
+    await message.sendMessage("```" + `SUDO number are : ${config.SUDO}` + "```");
   }
 );
