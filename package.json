@@ -1,6 +1,6 @@
 {
   "name": "Ezra-md",
-  "version": "2.0.1",
+  "version": "1.0.5",
   "description": "Ezra-md simple multi device WhatsApp Bot.",
   "main": "./index.js",
   "type": "commonjs",
