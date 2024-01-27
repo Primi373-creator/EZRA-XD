@@ -76,7 +76,7 @@ async function Abhiy() {
     if (connection === "open") {
     
       console.log("Plugins Installed...");
-      console.log("Ezra-XD Is Started🩵...");
+      console.log("Ezraaaaaahhhh🥹🦋...");
 
       let plugins = await PluginDB.findAll();
       plugins.map(async (plugin) => {
@@ -99,7 +99,7 @@ async function Abhiy() {
           require("./plugins/" + plugin);
         }
       });
-      console.log(" Plugin Installed..!!✅");
+      console.log(" EZRA XD RUNNED🦋");
       let str = `\n\n\n\n〄 𝑬𝒁𝑹𝑨 𝑿𝑫 𝑰𝑺 𝑺𝑻𝑨𝑹𝑻𝑬𝑫 〄 \n\n\n✰ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡    : ${require("./package.json").version } \n✰ 𝗣𝗟𝗨𝗚𝗜𝗡𝗦   : ${events.commands.length}`;
       conn.sendMessage(conn.user.id, { text: str });
      try {
