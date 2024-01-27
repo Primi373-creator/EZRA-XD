@@ -21,7 +21,7 @@
       "required": false
     },
     "SESSION_ID": {
-      "description": "Afiya-md session id",
+      "description": "Ezra-XD session id",
       "required": true
     },
     "LOGS": {
@@ -31,22 +31,22 @@
      "AUDIO_DATA": {
       "description": "audio data , title;artist;image url",
       "required": "false",
-      "value": "BOT;ABHIY;https://i.imgur.com/o4bQB14.jpeg"
+      "value": "𝐄𝐳𝐫𝐚 𝐗𝐃;𝐀𝐛𝐡𝐢𝐢𝐲;https://i.imgur.com/g8iNJNU.jpeg"
      },
      "CAPTION": {
       "description": "enter your media caption",
       "required": "false",
-      "value": "\n\n\n\n\n\n\n\n\n\n\n\n!"
+      "value": "\n\n\n\n\n\n\n\n\n\n\n\n𝗘𝘇𝗿𝗮𝗮𝗮𝗮𝗵𝗵𝗵🥹🦋"
     },
        "STICKER_DATA": {
-      "description": "Sticker pack name, eg : Afiya;by suhaid-bro",
+      "description": "Sticker pack name, eg : Ezra;©️Louis-X0",
       "required": "false",
-      "value": "EZRA-MD;WhatsAppBot"
+      "value": "𝐄𝐳𝐫𝐚 𝐗𝐃;©️𝐋𝐨𝐮𝐢𝐬-𝐗𝟎"
     },
        "BOT_INFO": {
       "description": "Bot info : botname;ownername;imageurl;link",
       "required": "false",
-      "value": "EZRA-MD;ABHIY;https://i.imgur.com/o4bQB14.jpeg"
+      "value": "𝛯𝛧𝑅𝛥 𝛸𝐷;𝐋𝐨𝐮𝐢𝐬-𝐗𝟎;https://i.imgur.com/o4bQB14.jpeg"
     },
      "ALWAYS_ONLINE": {
       "description": "Bot online online : true",
