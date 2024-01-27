@@ -244,14 +244,7 @@ Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
-
-
 const { SUDO } = require("../config");
-const { command, isPrivate } = require("../lib");
-const Config = require("../config");
-const Heroku = require("heroku-client");
-const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
-const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
 command(
   { pattern: "setsudo ?(.*)", fromMe: isPrivate, desc: "set new sudo", type: "heroku" },
   async (message, mm) => {
