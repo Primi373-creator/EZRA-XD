@@ -1,10 +1,10 @@
-const { SUDO } = require("../config");
-const { command, isPrivate } = require("../lib");
+const { Ezra, isPrivate } = require("../lib");
 const Config = require("../config");
 const Heroku = require("heroku-client");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
-command(
+const { SUDO } = require("../config");
+Ezra(
   { pattern: "setsudo ?(.*)", fromMe: isPrivate, desc: "set new sudo", type: "heroku" },
   async (message, mm) => {
     var newSudo = (message.reply_message ? message.reply_message.jid : "" || mm).split(
@@ -24,7 +24,7 @@ command(
   }
 );
 
-command(
+Ezra(
   {
     pattern: "delsudo ?(.*)",
     fromMe: isPrivate,
@@ -48,7 +48,7 @@ command(
   }
 );
 
-command(
+Ezra(
   { pattern: "getsudo ?(.*)", 
     fromMe: isPrivate, 
     desc: "shows sudo numbers", 
