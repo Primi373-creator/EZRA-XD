@@ -1,8 +1,8 @@
 const {
-    Ezra,
+    command,
     isPrivate
 } = require("../lib/");
-Ezra(
+command(
     {
         pattern: "ping",
         fromMe: isPrivate,
