@@ -4,7 +4,7 @@ const {
   deleteFilter,
   toggleFilter,
 } = require("../lib/database/filters");
-const { Ezra, isPrivate, tiny } = require("../lib");
+const { command, isPrivate, tiny } = require("../lib");
 
 const Lang = {
   FILTER_DESC:
@@ -19,7 +19,7 @@ const Lang = {
   DELETED: "*✅ The filter was successfully deleted!*",
 };
 
-Ezra(
+command(
   {
     pattern: "filter ?(.*)",
     fromMe: true,
@@ -56,7 +56,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "stop ?(.*)",
     fromMe: true,
@@ -77,7 +77,7 @@ Ezra(
   }
 );
 
-Ezra({ on: "text", fromMe: isPrivate }, async (message, match) => {
+command({ on: "text", fromMe: isPrivate }, async (message, match) => {
   var filtreler = await getFilter(message.jid);
   if (!filtreler) return;
   filtreler.map(async (filter) => {
