@@ -1,5 +1,5 @@
 const config = require("../config");
-const { command, isPrivate } = require("../lib/");
+const { Ezra, isPrivate } = require("../lib/");
 const { isAdmin, parsedJid, isUrl } = require("../lib");
 const { cron, saveSchedule } = require("../lib/scheduler");
 /* Copyright (C) 2022 X-Electra.
@@ -8,7 +8,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "add ",
     fromMe: isPrivate,
@@ -36,7 +36,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "kick ",
     fromMe: isPrivate,
@@ -64,7 +64,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "promote ",
     fromMe: isPrivate,
@@ -91,7 +91,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "demote ",
     fromMe: isPrivate,
@@ -119,7 +119,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "mute",
     fromMe: true,
@@ -142,7 +142,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "unmute",
     fromMe: true,
@@ -164,7 +164,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "amute",
     fromMe: true,
@@ -195,7 +195,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "aunmute",
     fromMe: true,
@@ -227,7 +227,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "gjid",
     fromMe: true,
@@ -254,7 +254,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "tagall ?(.*)",
     fromMe: true,
@@ -279,7 +279,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "tag ?(.*)",
     fromMe: true,
@@ -298,7 +298,7 @@ command(
     });
   }
 );
-command(
+Ezra(
   {
     pattern: "poll ?(.*)",
     fromMe: true,
@@ -341,7 +341,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     on: "text",
     fromMe: false,
@@ -377,7 +377,7 @@ EZRA-XD
 
 
 
-command(
+Ezra(
   {
     pattern: "join ?(.*)",
     fromMe: true,
