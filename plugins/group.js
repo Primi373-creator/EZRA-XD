@@ -376,22 +376,4 @@ EZRA-XD
 */
 
 
-const config = require("../config");
-const { command, isPrivate, errorMessage } = require("../lib/");
-const { isAdmin, parsedJid, isUrl, isPublic } = require("../lib");
-const { cron, saveSchedule } = require("../lib/scheduler");
-command(
-  {
-    pattern: "join ?(.*)",
-    fromMe: true,
-    desc: "Join in the group",
-    type: "group",
-  },
-  async (message, match) => {
-    var rgx = /^(https?:\/\/)?chat\.whatsapp\.com\/(?:invite\/)?([a-zA-Z0-9_-]{22})$/
-    if (!match || !rgx.test(match)) return await message.reply("_Need group link_")
-    var res = await message.client.groupAcceptInvite(match.split("/")[3])
-    if (!res) return await message.reply("*Invalid Group Link!*")
-    if (res) return await message.reply("*Joined!*")
-  }
-);
+
