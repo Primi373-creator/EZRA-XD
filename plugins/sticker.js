@@ -1,5 +1,5 @@
 const config = require("../config");
-const { command, isPrivate, getJson, sleep, tiny } = require("../lib/");
+const { Ezra, isPrivate, getJson, sleep, tiny } = require("../lib/");
 const { Image } = require("node-webpmux");
 
 /* Copyright (C) 2022 X-Electra.
@@ -8,7 +8,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "sticker",
     fromMe: isPrivate,
@@ -33,7 +33,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "tgs",
     fromMe: isPrivate,
@@ -78,7 +78,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "take",
     fromMe: isPrivate,
@@ -107,7 +107,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "exif",
     fromMe: true,
