@@ -1,7 +1,7 @@
-const { Ezra } = require("../lib/");
+const { command } = require("../lib/");
 const Jimp = require("jimp");
 
-Ezra(
+command(
   {
     pattern: "fullpp$",
     fromMe: true,
