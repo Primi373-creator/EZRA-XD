@@ -1,5 +1,5 @@
-const { command, sleep, isPrivate, isUrl, Bitly } = require("../lib/");
-command(
+const { Ezra, sleep, isPrivate, isUrl, Bitly } = require("../lib/");
+Ezra(
   {
     pattern: "getqr ?(.*)",
     fromMe: isPrivate,
