@@ -1,6 +1,6 @@
 const got = require("got");
 const Heroku = require("heroku-client");
-const { command, isPrivate, tiny } = require("../lib/");
+const { Ezra, isPrivate, tiny } = require("../lib/");
 const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
@@ -15,7 +15,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "restart",
     fromMe: true,
@@ -37,7 +37,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "shutdown",
     fromMe: true,
@@ -68,7 +68,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "dyno",
     fromMe: isPrivate,
@@ -111,7 +111,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "setvar ",
     fromMe: true,
@@ -146,7 +146,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "delvar ",
     fromMe: true,
@@ -182,7 +182,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "getvar ",
     fromMe: true,
@@ -215,7 +215,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "allvar",
     fromMe: true,
@@ -238,11 +238,3 @@ command(
       });
   }
 );
-
-/* Copyright (C) 2022 X-Electra.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-X-Asena - X-Electra
-*/
-
-
