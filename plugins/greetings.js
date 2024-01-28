@@ -1,4 +1,4 @@
-const { Ezra,tiny } = require("../lib/");
+const { command,tiny } = require("../lib/");
 const {
   setMessage,
   getMessage,
@@ -6,7 +6,7 @@ const {
   getStatus,
   toggleStatus,
 } = require("../lib/database/greetings");
-Ezra(
+command(
   {
     pattern: "welcome ?(.*)",
     fromMe: true,
@@ -64,7 +64,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "goodbye ?(.*)",
     fromMe: true,
