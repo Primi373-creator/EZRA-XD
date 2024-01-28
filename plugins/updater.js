@@ -1,6 +1,6 @@
 const got = require("got");
 const Heroku = require("heroku-client");
-const { command, isPrivate } = require("../lib/");
+const { Ezra, isPrivate } = require("../lib/");
 const Config = require("../config");
 const heroku = new Heroku({ token: Config.HEROKU_API_KEY });
 const baseURI = "/apps/" + Config.HEROKU_APP_NAME;
@@ -10,7 +10,7 @@ const git = simpleGit();
 const exec = require("child_process").exec;
 
 
-command(
+Ezra(
   {
     pattern: "update",
     fromMe: true,
@@ -71,7 +71,7 @@ command(
   }
 );
 
-command(
+Ezra(
   {
     pattern: "update now",
     fromMe: true,
