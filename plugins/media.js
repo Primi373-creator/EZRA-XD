@@ -1,6 +1,5 @@
 const {
-  Function,
-  command,
+  Ezra,
   qrcode,
   webp2mp4,
   isUrl,
@@ -34,7 +33,7 @@ X-Asena - X-Electra
 
 
 
-Function(
+Ezra(
   {
     pattern: "img",
     fromMe: isPrivate,
@@ -89,7 +88,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "photo",
     fromMe: isPrivate,
@@ -112,7 +111,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "mp3",
     fromMe: isPrivate,
@@ -127,7 +126,7 @@ command(
   }
 );
   
-command(
+Ezra(
   {
     pattern: "mp4",
     fromMe: isPrivate,
@@ -151,7 +150,7 @@ you may not use this file except in compliance with the License.
 X-Asena */
 
 
-command(
+Ezra(
   {
     pattern: "yts",
     fromMe: isPrivate,
@@ -193,7 +192,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "ytv",
     fromMe: isPrivate,
@@ -220,7 +219,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "yta",
     fromMe: isPrivate,
