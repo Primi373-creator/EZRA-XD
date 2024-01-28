@@ -40,7 +40,7 @@ const {
   jsonformat,
   Serialize,
   processTime,
-  Ezra,
+  command,
 } = require("../lib/");
 const util = require("util");
 const config = require("../config");
@@ -51,7 +51,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-Ezra({pattern:'eval', on: "text", fromMe: true,desc :'Runs a server code'}, async (message, match, m, client) => {
+command({pattern:'eval', on: "text", fromMe: true,desc :'Runs a server code'}, async (message, match, m, client) => {
   if (match.startsWith(">")) {
     //const m = message;
     try {
