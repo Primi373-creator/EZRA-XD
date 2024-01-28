@@ -27,12 +27,12 @@
 
 
 
-const { Ezra , isPrivate , getBuffer} = require("../lib");
+const { command , isPrivate , getBuffer} = require("../lib");
 const f = require("node-fetch");
 const config = require("../config");
 
 
-Ezra(
+command(
     {
         pattern: "insta",
         fromMe: isPrivate,
