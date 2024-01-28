@@ -1,4 +1,4 @@
-const { command, getUrl } = require("../lib");
+const { Ezra, getUrl } = require("../lib");
 const got = require("got");
 const fs = require("fs");
 const { PluginDB, installPlugin } = require("../lib/database/plugins");
@@ -9,7 +9,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "install ?(.*)",
     fromMe: true,
@@ -66,7 +66,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   { pattern: "plugin", fromMe: true, desc: "plugin list" ,type:'user'},
   async (message, match) => {
     var mesaj = "";
@@ -93,7 +93,7 @@ you may not use this file except in compliance with the License.
 X-Asena - X-Electra
 */
 
-command(
+Ezra(
   {
     pattern: "remove(?: |$)(.*)",
     fromMe: true,
