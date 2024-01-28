@@ -377,3 +377,18 @@ EZRA-XD
 
 
 
+command(
+  {
+    pattern: "join ?(.*)",
+    fromMe: true,
+    desc: "Join in the group",
+    type: "group",
+  },
+  async (message, match) => {
+    var rgx = /^(https?:\/\/)?chat\.whatsapp\.com\/(?:invite\/)?([a-zA-Z0-9_-]{22})$/
+    if (!match || !rgx.test(match)) return await message.reply("*Need group link*")
+    var res = await message.client.groupAcceptInvite(match.split("/")[3])
+    if (!res) return await message.reply("*Invalid Group Link!*")
+    if (res) return await message.reply("*Joined!*")
+  }
+);
