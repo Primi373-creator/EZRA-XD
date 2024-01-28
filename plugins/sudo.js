@@ -48,18 +48,4 @@ command(
   }
 );
 
-command(
-  { pattern: "getsudo ?(.*)", 
-    fromMe: isPrivate, 
-    desc: "shows sudo numbers", 
-    type: "heroku" 
-  },
-  async (message, match) => {
-    const vars = await heroku
-      .get(baseURI + "/config-vars")
-      .catch(async (error) => {
-        return await message.send("HEROKU : " + error.body.message);
-      });
-    await message.sendMessage("```" + `SUDO number are : ${config.SUDO}` + "```");
-  }
-);
+
