@@ -1,4 +1,4 @@
-const { Ezra, qrcode, isUrl, isPrivate, findMusic } = require("../lib/");
+const { command, qrcode, isUrl, isPrivate, findMusic } = require("../lib/");
 const jimp = require("jimp");
 const QRReader = require("qrcode-reader");
 const { RMBG_KEY } = require("../config");
@@ -9,7 +9,7 @@ const stream = require("stream");
 const { promisify } = require("util");
 const pipeline = promisify(stream.pipeline);
 const fs = require("fs");
-Ezra(
+command(
   {
     pattern: "qr",
     fromMe: isPrivate,
@@ -36,7 +36,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "find ?(.*)",
     fromMe: true,
@@ -83,7 +83,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "vv",
     fromMe: isPrivate,
@@ -98,7 +98,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "removebg",
     fromMe: isPrivate,
@@ -135,7 +135,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "bitly ?(.*)",
     fromMe: isPrivate,
@@ -151,7 +151,7 @@ Ezra(
   }
 );
 
-Ezra(
+command(
   {
     pattern: "spdf",
     fromMe: isPrivate,
