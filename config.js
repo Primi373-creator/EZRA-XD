@@ -8,6 +8,7 @@ const toBool = (x) => x == "true";
 DATABASE_URL = process.env.DATABASE_URL || "./lib/database.db";
 let HANDLER = "false";
 module.exports = {
+  SPARKY_API: "https://aswin-sparky.koyeb.app",
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   LOGS: toBool(process.env.LOGS) || true,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
