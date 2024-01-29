@@ -135,7 +135,7 @@ command(
     });
     menu += `╰───────┈┫「 𝐄𝐙𝐑𝐀-𝐗𝐃-𝐁𝐎𝐓 」┣┈────♡`;
     return await message.reply(message.jid, { text: (tiny(menu)), contextInfo: { externalAdReply: {
-title: "ezraa",
+title: "𝚵𝚭𝚪𝚫-𝚾𝐃",
 sourceUrl: "",
 mediaUrl: "https://instagram.com/abhiiiiiyh",
 mediaType: 1,
