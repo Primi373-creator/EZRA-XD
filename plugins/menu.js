@@ -46,7 +46,7 @@ Description: ${i.desc}\`\`\``);
 ┃  ✺ │  *PLATFROM*: linux
 ┃    ╰──────────────
 ╰━━━━━━━━━━━━━━━\n\n  ▎▍▌▌▉▏▎▌▉▐▏▌
-  ▎▍▌▌▉▏▎▌▉▐▏▌\n   𝚵𝚭𝚪𝚫-𝚾𝐃-𝚩𝚯𝚻\n`
+  ▎▍▌▌▉▏▎▌▉▐▏▌\n   𝐇𝐀𝐍𝐍𝐀-𝐗𝐎-𝐌𝐃\n`
 menu += `╭─────────────┈⊷\n`;
 
       let cmnd = [];
@@ -81,13 +81,13 @@ menu += `╭─────────────┈⊷\n`;
       let penu = tiny(menu)
       let img = config.BOT_INFO.split(';')[2]
       return await client.sendMessage(message.jid,{image: {url: img}, caption: (penu), contextInfo: { externalAdReply: {
-title: "𝚵𝚭𝚪𝚫-𝚾𝐃",
+title: config.BOT_INFO.split(';')[0],
 sourceUrl: "",
 mediaUrl: "https://instagram.com/abhiiiiiyh",
 mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: false,
-thumbnailUrl: "https://i.imgur.com/PlDhcfI.jpeg" }}
+thumbnailUrl: config.BOT_INFO.split(';')[2] }}
     })
     }
 }catch(e){
