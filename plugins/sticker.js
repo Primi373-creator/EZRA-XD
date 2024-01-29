@@ -17,7 +17,7 @@ command(
   },
   async (message, match, m) => {
     if (!(message.reply_message.video || message.reply_message.image))
-      return await message.reply("_Reply to photo or video_");
+      return await message.reply("Reply to photo or video");
     let buff = await m.quoted.download();
     message.sendMessage(
       buff,
@@ -43,7 +43,7 @@ command(
   async (message, match) => {
     if (!match)
       return message.reply(
-        "_Enter a tg sticker url_\nEg: https://t.me/addstickers/Oldboyfinal\nKeep in mind that there is a chance of ban if used frequently"
+        "Enter a tg sticker url\nEg: https://t.me/addstickers/Oldboyfinal\nKeep in mind that there is a chance of ban if used frequently"
       );
     let packid = match.split("/addstickers/")[1];
     let { result } = await getJson(
@@ -87,7 +87,7 @@ command(
   },
   async (message, match, m) => {
     if (!message.reply_message && !message.reply_message.sticker)
-      return await message.reply("_Reply to sticker_");
+      return await message.reply("Reply to sticker");
     let buff = await m.quoted.download();
     let [packname, author] = match.split(",");
     await message.sendMessage(
@@ -109,14 +109,14 @@ X-Asena - X-Electra
 
 command(
   {
-    pattern: "getexif",
+    pattern: "exif",
     fromMe: true,
     desc: "description",
     type: "type",
   },
   async (message, match, m) => {
     if (!message.reply_message || !message.reply_message.sticker)
-      return await message.reply("_Reply to sticker_");
+      return await message.reply("Reply to sticker");
     let img = new Image();
     await img.load(await m.quoted.download());
     const exif = JSON.parse(img.exif.slice(22).toString());
